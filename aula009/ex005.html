@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-size: 2em;
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        p{
+            text-align: center;
+            font-size: 1.5em;
+        }
+        div{
+            background-color: red;
+            border-radius: 5px;
+            width: 200px;
+            height: 30px;
+            border: 2px solid black;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>aprendendo o <strong>DOM</strong></h1>
+    <p>aqui vai o resultado</p>
+    <div id="cubo">clique em mim</div>
+    <script>
+        var cubo = window.document.getElementsByTagName("div")
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName("p")[0]
+        document.write(p1.innerText)
+        p1.style.backgroundColor = "blue"
+        p1.style.border = "2px solid black"
+        corpo.style.backgroundColor = "#9d6a3f"
+        var c = window.document.getElementById("cubo")
+        c.style.backgroundColor = "green"
+        c.innerText = "CARAAAIAOOAOO"
+        var teste = document.getElementById("cubo")
+        teste.style.height = "200px"
+        teste.style.translate = "100px 100px"
+        teste.style.background = "red"
+        teste.style.borderRadius = "40px 10px 50px 100px"
+
+    </script>
+    
+</body>
+</html>
