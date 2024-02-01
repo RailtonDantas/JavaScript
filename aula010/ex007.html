@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        button{
+            background-color: aqua;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>soma de 2 números</h1>
+    <input type="number" name="num1" id="num1">+
+    <input type="number" name="num2" id="num2">
+    <button id="button" onclick="somar()">SOMAR</button>
+    <div id="result">Resultado:</div>
+    <script>
+    function somar(){
+        var n1 = document.getElementById("num1")
+        var n2 = document.getElementById("num2")
+        var butao = document.getElementById("button")
+        var nn1 = Number(n1.value)
+        var nn2 = Number(n2.value)
+        var s = nn1 + nn2
+        var res = document.getElementById("result")
+        res.innerText = `A soma entre os números ${nn1} e ${nn2} é ${s} `
+    }
+
+    </script>
+    
+    
+</body>
+</html>

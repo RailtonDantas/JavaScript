@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:95vw;
+            height: 95vh;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div id="quadrado" >
+            interaja...
+        </div>
+    </main>
+    <script>
+        var d = document.getElementById("quadrado")
+
+        d.addEventListener("click", clicar)
+        d.addEventListener("mouseenter", entrar)
+        d.addEventListener("mouseout",sair)
+
+        
+       function clicar(){
+        d.innerText = ("clicou")
+        if(d.style.backgroundColor == "red")
+        {d.style.scale = "1.6"
+        d.style.backgroundColor = "blue"
+        d.style.boxShadow = "0px 0px 50px 50px aqua"}
+        else{
+            d.style.scale = "1"
+            d.style.backgroundColor = "red"
+            d.style.boxShadow = "none"
+        }
+       }
+       function entrar(){
+        d.style.backgroundColor = "green"
+        d.innerText = ("entrou")
+       }
+       function sair(){
+        d.innerText = ("Saiu")
+        d.style.backgroundColor = "aqua"
+       }
+    </script>
+</body>
+</html>

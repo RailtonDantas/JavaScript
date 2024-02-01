@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <main>
+         <h1>Radar de trânsito</h1>
+         <label for="ivel">Velocidade do carro: <input required placeholder="Digite a velocidade do seu carro" min="0" type="number" name="vel" id="ivel"></label >
+         <div id="limite">LIMITE DE VELOCIDADE: 80KM/h</div>
+         <button id="button" onclick="resultado()">ENVIAR PARA ANÁLISE</button>
+         <div id="res">Resultado: <p id="result"></p></div>
+    </main>
+    <script>
+        function resultado(){
+             var velc = document.getElementById("ivel")
+             var velcr = Number(velc.value)
+             var result = document.getElementById("result")
+             var princi = document.getElementsByTagName("main")[0]
+             princi.style.height = "350px"
+             if (velcr > 80){
+                 result.innerHTML = `a sua velocidade é ${velcr}KM/h e isso é maior do que o limite de 80KM/h. <strong>MULTADO</strong>`
+             }
+             else{result.innerHTML = ` a sua velocidade é ${velcr}KM/h e está dentro do limite. <strong> Tenha uma boa viagem</strong>`}
+             
+             
+        }
+    </script>
+    
+</body>
+</html>
